@@ -2,23 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CounterApp from './CounterApp';
 import reportWebVitals from './reportWebVitals';
-import { Switch, Route, Router, Redirect} from 'react-router-dom';
+import { Route, Router, Redirect} from 'react-router-dom';
 import { createBrowserHistory} from "history";
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    <Switch>
-     <Route path="/app" component={App}　/>
-     <Route path="/counterapp" component={CounterApp}　/>
-
-     <Redirect from="/" to="/app"> 
-     </Redirect>
-
-    </Switch>
+    <App />
   </Router>,
   document.getElementById('root')
 );
