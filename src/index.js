@@ -13,9 +13,11 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
      <Route path="/app" component={App}　/>
-     <Route path="/app" component={CounterApp}　/>
+     <Route path="/counterapp" component={CounterApp}　/>
+
      <Redirect from="/" to="/app"> 
-     {/* </Redirect> */}
+     </Redirect>
+
     </Switch>
   </Router>,
   document.getElementById('root')
