@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import CounterApp from './CounterApp';
 import reportWebVitals from './reportWebVitals';
+import { Switch, Route, Router, Redirect} from 'react-router-dom';
+import { createBrowserHistory} from "history";
+
+const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router history={hist}>
+    <Switch>
+     <Route path="/app" component={App}　/>
+     <Route path="/app" component={CounterApp}　/>
+     <Redirect from="/" to="/app"> 
+     {/* </Redirect> */}
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 
