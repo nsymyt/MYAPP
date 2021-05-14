@@ -11,8 +11,8 @@ const App = () => {
     return (
       <Route>
       <Sidebar />
-      <Route path="/slide" component={Slide} />
-      <Route path="/counterapp" component={CounterApp} />
+      {/* <Route path="/slide" component={Slide} />
+      <Route path="/counterapp" component={CounterApp} /> */}
       <Redirect from="/" to="/slide" /> 
    </Route>
     );

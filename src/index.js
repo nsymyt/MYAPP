@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Getdate from './Getdate';
+import FrontC from './frontC';
 import reportWebVitals from './reportWebVitals';
 import { Route, Router, Redirect} from 'react-router-dom';
 import { createBrowserHistory} from "history";
@@ -10,7 +12,9 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    <App />
+    {/* <Getdate /> */}
+    {/* <App /> */}
+    <FrontC />
   </Router>,
   document.getElementById('root')
 );

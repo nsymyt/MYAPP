@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -19,6 +19,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import SlideshowIcon from '@material-ui/icons/Slideshow';
 import CreateIcon from '@material-ui/icons/Create';
 import AppsIcon from '@material-ui/icons/Apps';
+
+
+import taskBoard from './taskBoard2';
+import Slide from './Slide';
 
 const drawerWidth = 240;
 
@@ -147,7 +151,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="個人情報研修" />
             </ListItem>
           </Link>
-          <Link to="/counterapp" style={{boxShadow:'none', textDecoration:'none', color:'inherit', fontFamily:'sans-serif'}}>
+          <Link to="/taskboard" style={{boxShadow:'none', textDecoration:'none', color:'inherit', fontFamily:'sans-serif'}}>
             <ListItem button>
             <ListItemIcon><CreateIcon /></ListItemIcon>
               <ListItemText primary="個人情報テスト" />
@@ -161,7 +165,8 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
+        <Route path="/slide" component={Slide} />
+        <Route path="/taskboard" component={taskBoard} />
       </main>
     </div>
   );
